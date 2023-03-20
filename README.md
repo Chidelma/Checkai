@@ -12,22 +12,31 @@ git clone https://github.com/chidelma/checkai.git
 ```
 
 ## Usage
-To play the game, navigate to the root directory of the project and run the following command:
+To play the game, navigate to the `src` directory of the project and run the following commands:
 
 ```
-cargo run
+cargo build
+```
+
+```
+cargo run main.rs
 ```
 
 This will start the game and the AI will play against itself.
 
-AI Algorithm
+## AI Algorithm
 The AI uses the alpha-beta pruning min-max algorithm to determine the next move. This algorithm searches the game tree by exploring each possible move and its potential outcomes. It uses a heuristic scoring system to evaluate the best move based on the current state of the game board.
 
-Caching
+## Caching
 The program caches the moves to save time during future games. This means that if the AI encounters a game board state that it has already evaluated, it will retrieve the cached result instead of re-evaluating it.
 
-Training
+## Training
 After every game, the moves are converted into matrices (datapoints) for training using Keras in Python. This allows the AI to improve its performance over time by learning from its past experiences.
 
-Conclusion
+To start training, navigate to the root directory of the project and run the following commands:
+```
+python3 train.py
+```
+
+## Conclusion
 This program provides a fun and challenging game of checkers, while also demonstrating the use of the alpha-beta pruning min-max algorithm with a heuristic scoring system. The caching and training features make the AI more efficient and effective, and provide a good foundation for future improvements.
