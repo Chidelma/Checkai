@@ -1,0 +1,9 @@
+[package]
+name = "alphaZero"
+version = "0.1.0"
+authors = ["Chidelma"]
+edition = "2018"
+
+[dependencies]
+rand = "0.7.3"
+serde_any = "0.5.0"
